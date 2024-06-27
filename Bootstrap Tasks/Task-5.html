@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .form-group .required::after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container" style="background-color: lightgray;">
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-4">
+                    <label for="firstName" class="required">First Name</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="lastName" class="required">Last Name</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="email" class="required">E-Mail</label>
+                </div>
+                <div class="col-8">
+                    <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="phone">Phone #</label>
+                </div>
+                <div class="col-8">
+                    <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212">
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="address">Address</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="address" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="city">City</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="city" placeholder="City">
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="state" class="required">State</label>
+                </div>
+                <div class="col-8">
+                    <select class="form-control" id="state" required>
+                        <option value="">Please select your state</option>
+                        <option value="">West Bengal</option>
+                        <option value="">Maharashtra</option>
+                        <option value="">Telengana</option>
+                        <option value="">Andhra Pradesh</option>
+                        <option value="">Haryana</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label>Do you have hosting?</label>
+                </div>
+                <div class="col-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes">
+                        <label class="form-check-label" for="hostingYes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no">
+                        <label class="form-check-label" for="hostingNo">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col-4">
+                    <label for="projectDescription">Project Description</label>
+                </div>
+                <div class="col-8">
+                    <textarea class="form-control" id="projectDescription" rows="3" placeholder="Project Description"></textarea>
+                </div>
+            </div>
+            <div class="form-row align-items-center mt-3">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-warning">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

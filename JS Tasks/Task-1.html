@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-1</title>
+</head>
+
+<body>
+    <script>
+        function reverseNumber(number) {
+            let str = number.toString();
+            let reversedStr = str.split('').reverse().join('');
+            let reversedNumber = parseFloat(reversedStr) * Math.sign(number);
+            return reversedNumber;
+        }
+        console.log(reverseNumber(12345));
+        console.log(reverseNumber(-6789)); 
+    </script>
+
+</body>
+
+</html>

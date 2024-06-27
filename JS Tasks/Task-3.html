@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication and Division</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .result {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container shadow">
+        <h2 class="text-center">Multiply and Divide Calculator</h2>
+        <form id="calcForm">
+            <div class="form-group">
+                <label for="number1">Number 1</label>
+                <input type="number" class="form-control" id="number1" placeholder="Enter first number" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="number2">Number 2</label>
+                <input type="number" class="form-control" id="number2" placeholder="Enter second number" required>
+            </div>
+            <br>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-info" onclick="multiply()">Multiply</button>
+                <button type="button" class="btn btn-warning" onclick="divide()">Divide</button>
+            </div>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function multiply() {
+            let num1 = parseFloat(document.getElementById('number1').value);
+            let num2 = parseFloat(document.getElementById('number2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers.';
+                return;
+            }
+
+            let multiplication = num1 * num2;
+            document.getElementById('result').innerHTML = `Multiplication result is: ${multiplication}`;
+        }
+
+        function divide() {
+            let num1 = parseFloat(document.getElementById('number1').value);
+            let num2 = parseFloat(document.getElementById('number2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers.';
+                return;
+            }
+            if (num2 === 0) {
+                document.getElementById('result').innerHTML = 'Division by zero is not allowed.';
+                return;
+            }
+
+            let division = num1 / num2;
+            document.getElementById('result').innerHTML = `Division result is: ${division}`;
+        }
+    </script>
+</body>
+
+</html>

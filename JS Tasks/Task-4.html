@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-4</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+        .btn {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        .result {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="showDate()">Show date</button>
+    <div id="date" class="result"></div>
+
+    <button class="btn" onclick="showTime()">Show Time</button>
+    <div id="time" class="result"></div>
+
+    <script>
+        function showDate() {
+            const now = new Date();
+            const day = now.getDate();
+            const month = now.toLocaleString('default', { month: 'long' });
+            const year = now.getFullYear();
+            const dateString = `${day}/${month}/${year}`;
+            document.getElementById('date').innerText = dateString;
+        }
+
+        function showTime() {
+            const now = new Date();
+            const timeString = now.toString();
+            document.getElementById('time').innerText = timeString;
+        }
+    </script>
+</body>
+</html>
